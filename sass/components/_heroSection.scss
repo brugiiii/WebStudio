@@ -3,29 +3,67 @@
 .hero {
     background-color: $hero-bg;
     background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
-        url(../../images/overlay.jpg);
+        url(../../images/Overlay/overlay.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    max-width: 1600px;
     margin: 0 auto;
 
     text-align: center;
     letter-spacing: 0.06em;
 
-    padding: 200px 0px 200px;
+    padding: 118px 0px;
+
+    @media screen and(min-width:480px){
+        max-width: 480px;
+    }
+
+    @media screen and(min-width:768px){
+        max-width: 768px;
+    }
+
+    @media screen and(min-width:1200px){
+        max-width: 1600px;
+    }
+
+    @media screen and(min-width:1200px){
+        padding: 200px 0;
+    }
+        
+    
+}
+
+@media screen and(min-device-pixel-ratio: 2),
+       screen and(min-resolution: 192dpi),
+       screen and(min-resolution: 2dppx) {
+           .hero{
+                background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg), url(../../images/Overlay/overlay2x.jpg);
+            }
+}
+
+@media screen and(min-device-pixel-ratio: 3),
+       screen and(min-resolution: 288dpi),
+       screen and(min-resolution: 3dppx) {
+           .hero {
+                background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg), url(../../images/Overlay/overlay3x.jpg);
+            }
 }
 
 .hero__title {
     color: $white-color;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: calc(42/26);
     text-transform: uppercase;
 
     margin: 0px auto 30px;
-    max-width: 696px;
-}
+    max-width: 360px;
 
+    @media screen and(min-width:1200px){
+        min-width: 696px;
+        font-size: 44px;
+        line-height: calc(60/44);
+    }
+}

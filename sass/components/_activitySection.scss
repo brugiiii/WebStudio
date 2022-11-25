@@ -1,4 +1,10 @@
 /* activity list */
+.activity__section{
+    display: none;
+    @media screen and(min-width:1200px) {
+        display: block;
+    }
+}
 .activity-list {
     display: flex;
     flex-wrap: wrap;

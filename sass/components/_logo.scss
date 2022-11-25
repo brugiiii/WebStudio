@@ -4,9 +4,15 @@
 
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
+    
+    display: block;
+    font-size: 24px;
+    line-height: calc(28/24);
+
+    @media screen and(min-width:1200px) {
     font-size: 26px;
     line-height: 1.19;
-    display: block;
+    }
 }
 
 .logo__last-part--black{
@@ -18,10 +24,19 @@
 }
 
 .header__logo {
-    padding: 24px 0px 25px;
-    margin-right: 93px;
+    margin-right: 87px;
+    padding: 16px 0;
+
+    @media screen and(min-width:768px){
+        padding: 26px 0;;
+    }
+
+    @media screen and(min-width:1200px){
+        margin-right: 93px;
+        padding: 24px 0px 25px;
+    }
 }
 
 .footer__logo {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
