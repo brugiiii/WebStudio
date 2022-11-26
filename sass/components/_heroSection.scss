@@ -1,69 +1,96 @@
 /* hero */
 
 .hero {
-    background-color: $hero-bg;
+  background-color: $hero-bg;
+  background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
+    url(../../images/Overlay/Mobile1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  margin: 0 auto;
+  max-width: 1600px;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  padding: 118px 0px;
+
+  @media screen and(min-width:1200px) {
+    padding: 200px 0;
+  }
+
+  @media screen and(min-device-pixel-ratio: 2),
+    screen and(min-resolution: 192dpi),
+    screen and(min-resolution: 2dppx) {
     background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
-        url(../../images/Overlay/overlay.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+      url(../../images/Overlay/Mobile2x.jpg);
+  }
 
-    margin: 0 auto;
-
-    text-align: center;
-    letter-spacing: 0.06em;
-
-    padding: 118px 0px;
-
-    @media screen and(min-width:480px){
-        max-width: 480px;
-    }
-
-    @media screen and(min-width:768px){
-        max-width: 768px;
-    }
-
-    @media screen and(min-width:1200px){
-        max-width: 1600px;
-    }
-
-    @media screen and(min-width:1200px){
-        padding: 200px 0;
-    }
-        
-    
+  @media screen and(min-device-pixel-ratio: 3),
+    screen and(min-resolution: 288dpi),
+    screen and(min-resolution: 3dppx) {
+    background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
+      url(../../images/Overlay/Mobile3x.jpg);
+  }
 }
 
-@media screen and(min-device-pixel-ratio: 2),
-       screen and(min-resolution: 192dpi),
-       screen and(min-resolution: 2dppx) {
-           .hero{
-                background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg), url(../../images/Overlay/overlay2x.jpg);
-            }
+@media screen and(min-width:481px) {
+  .hero {
+    background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
+      url(../../images/Overlay/Tablet1x.jpg);
+
+    @media screen and(min-device-pixel-ratio: 2),
+      screen and(min-resolution: 192dpi),
+      screen and(min-resolution: 2dppx) {
+      background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
+        url(../../images/Overlay/Tablet2x.jpg);
+    }
+
+    @media screen and(min-device-pixel-ratio: 3),
+      screen and(min-resolution: 288dpi),
+      screen and(min-resolution: 3dppx) {
+      background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
+        url(../../images/Overlay/Tablet3x.jpg);
+    }
+  }
 }
 
-@media screen and(min-device-pixel-ratio: 3),
-       screen and(min-resolution: 288dpi),
-       screen and(min-resolution: 3dppx) {
-           .hero {
-                background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg), url(../../images/Overlay/overlay3x.jpg);
-            }
+@media screen and(min-width:769px) {
+  .hero {
+    background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
+      url(../../images/Overlay/Desktop1x.jpg);
+
+    @media screen and(min-device-pixel-ratio: 2),
+      screen and(min-resolution: 192dpi),
+      screen and(min-resolution: 2dppx) {
+      background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
+        url(../../images/Overlay/Desktop2x.jpg);
+    }
+
+    @media screen and(min-device-pixel-ratio: 3),
+      screen and(min-resolution: 288dpi),
+      screen and(min-resolution: 3dppx) {
+      background-image: linear-gradient($hero-overlay-bg, $hero-overlay-bg),
+        url(../../images/Overlay/Desktop3x.jpg);
+    }
+  }
 }
 
 .hero__title {
-    color: $white-color;
+  color: $white-color;
 
-    font-weight: 900;
-    font-size: 26px;
-    line-height: calc(42/26);
-    text-transform: uppercase;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: calc(42 / 26);
+  text-transform: uppercase;
 
-    margin: 0px auto 30px;
-    max-width: 360px;
+  margin: 0px auto 30px;
+  max-width: 360px;
 
-    @media screen and(min-width:1200px){
-        min-width: 696px;
-        font-size: 44px;
-        line-height: calc(60/44);
-    }
+  @media screen and(min-width:1200px) {
+    min-width: 696px;
+    font-size: 44px;
+    line-height: calc(60 / 44);
+  }
 }

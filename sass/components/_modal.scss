@@ -1,183 +1,185 @@
 /* backdrop + modal */
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    visibility: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
 
-    transition: opacity $duration $cubic-bezier,
-        visibility $duration $cubic-bezier;
+  transition: opacity $duration $cubic-bezier, visibility $duration $cubic-bezier;
 }
 
 .backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  width: 93.906%;
+  height: 609px;
+
+  background: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and(min-width:480px) {
     width: 450px;
-    height: 609px;
+  }
 
-    background: $white-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-
-    @media screen and(min-width: 1200px){
-        width: 528px;
-        height: 581px;
-    }
+  @media screen and(min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    fill: currentColor;
+  fill: currentColor;
 }
 
 /* modal form */
 .modal-form {
-    display: flex;
-    flex-direction: column;
-    padding: 33px 40px 47px;
+  display: flex;
+  flex-direction: column;
+  padding: 33px 40px 47px;
 }
 
 .modal-form__title {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 
-    font-size: 20px;
-    line-height: calc(30 / 20);
-    text-align: center;
+  font-size: 20px;
+  line-height: calc(30 / 20);
+  text-align: center;
 
-    color: $title-text-color;
+  color: $title-text-color;
 
-    @media screen and(min-width:1200px){
-        line-height: calc(23 / 20);
-    }
+  @media screen and(min-width:1200px) {
+    line-height: calc(23 / 20);
+  }
 }
 
 .modal-form__label {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .modal-form__text {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
-.modal-form__textarea-input{
-    &::placeholder {
-        color: $placeholder-text-color;
-    }
+.modal-form__textarea-input {
+  &::placeholder {
+    color: $placeholder-text-color;
+  }
 }
 
 .modal-form__text,
 .modal-form__textarea-input::placeholder {
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
 }
 
 .modal-form__label--posision {
-    position: relative;
+  position: relative;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .modal-form__icon {
-    position: absolute;
-    left: 12px;
-    bottom: 11px;
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
 }
 
-.modal-form__label{
-    &:hover .modal-form__icon, &:focus-within .modal-form__icon{
-        fill: $accent-color;
-    }
+.modal-form__label {
+  &:hover .modal-form__icon,
+  &:focus-within .modal-form__icon {
+    fill: $accent-color;
+  }
 }
-
 
 .modal-form__input {
-    height: 40px;
-    padding-left: 42px;
+  height: 40px;
+  padding-left: 42px;
 }
 
 .modal-form__label--margin {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .modal-form__textarea-input {
-    padding: 12px 16px;
-    height: 120px;
+  padding: 12px 16px;
+  height: 120px;
 
-    resize: none;
+  resize: none;
 }
 
 .modal-form__input,
 .modal-form__textarea-input {
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .modal-form__checkbox-label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .modal-form__checkbox-input {
-    cursor: pointer;
+  cursor: pointer;
 
-    appearance: none;
-    position: absolute;
+  appearance: none;
+  position: absolute;
 }
 
-.modal-form__checkbox-text{
-    
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    padding-left: 23px;
+.modal-form__checkbox-text {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  padding-left: 23px;
 
-    @media screen and(min-width:1200px){
-        font-size: 14px;
-        line-height: calc(24 / 14);
-    }
+  @media screen and(min-width:1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .modal-form__checkbox-link {
-    color: $accent-color;
+  color: $accent-color;
 }
 
 .modal-form__checkbox-input {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-    background-image: url(../../images/checkbox-off.svg);
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(../../images/checkbox-off.svg);
 
-    &:checked{
-        background-image: url(../../images/checkbox-on.svg);
-    }
+  &:checked {
+    background-image: url(../../images/checkbox-on.svg);
+  }
 }
