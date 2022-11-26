@@ -328,9 +328,13 @@ img {
     display: none;
   }
 }
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+.menu-container .menu-toggle:hover,
+.menu-container .menu-toggle:focus {
+  color: #2196f3;
+}
+
+.menu-close-icon {
+  fill: currentColor;
 }
 
 .menu-container {
@@ -341,7 +345,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 48px 0 48px 40px;
   background-color: #ffffff;
   z-index: 999;
   transform: translateX(100%);
@@ -356,7 +360,7 @@ img {
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: #212121;
 }
 
 .mobile-nav {
@@ -402,6 +406,8 @@ img {
 
 .networks-list {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .networks-list__link {

@@ -124,7 +124,7 @@
           <ul class="activity-list list">
             <li class="activity-list__item">
               <div class="activity-list__thumb">
-                <img src="./images/1.jpg" alt="Руки на клавіатурі" width="370" class="img" />
+                <img src="./images/1.jpg" alt="Руки на клавіатурі" width="370" />
                 <h3 class="activity-list__title">Десктопні додатки</h3>
               </div>
             </li>
@@ -134,19 +134,13 @@
                   src="./images/2.jpg"
                   alt="В одній руці телефон, інша на клавіатурі ноутбука"
                   width="370"
-                  class="img"
                 />
                 <h3 class="activity-list__title">Мобільні додатки</h3>
               </div>
             </li>
             <li class="activity-list__item">
               <div class="activity-list__thumb">
-                <img
-                  src="./images/3.jpg"
-                  alt="Кольорова палітра на планшені"
-                  width="370"
-                  class="img"
-                />
+                <img src="./images/3.jpg" alt="Кольорова палітра на планшені" width="370" />
                 <h3 class="activity-list__title">Дизайнерські рішення</h3>
               </div>
             </li>
@@ -158,12 +152,35 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list__item">
-              <img
-                src="./images/TeamPhoto/IhorDemyanenkoMobile1x.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/TeamPhoto/IhorDemyanenkoDesktop270.jpg 270w,
+                    ./images/TeamPhoto/IhorDemyanenkoDesktop540.jpg 540w,
+                    ./images/TeamPhoto/IhorDemyanenkoDesktop810.jpg 810w
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/TeamPhoto/IhorDemyanenkoTablet354.jpg   354w,
+                    ./images/TeamPhoto/IhorDemyanenkoTablet708.jpg   708w,
+                    ./images/TeamPhoto/IhorDemyanenkoTablet1062.jpg 1062w
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/TeamPhoto/IhorDemyanenkoMobile450.jpg   450w,
+                    ./images/TeamPhoto/IhorDemyanenkoMobile900.jpg   900w,
+                    ./images/TeamPhoto/IhorDemyanenkoMobile1350.jpg 1350w
+                  "
+                  src="./images/TeamPhoto/IhorDemyanenkoMobile450.jpg"
+                  sizes="(min-width: 1600px) 15vw, (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team-list__content">
                 <h3 class="team-list__title">Ігор Дем'яненко</h3>
                 <p class="team-list__text">Product Designer</p>
@@ -224,7 +241,35 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/5.jpg" alt="Ольга Рєпіна" width="270" class="img" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/TeamPhoto/OlgaRepinaDesktop270.jpg 270w,
+                    ./images/TeamPhoto/OlgaRepinaDesktop540.jpg 540w,
+                    ./images/TeamPhoto/OlgaRepinaDesktop810.jpg 810w
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/TeamPhoto/OlgaRepinaTablet354.jpg   354w,
+                    ./images/TeamPhoto/OlgaRepinaTablet708.jpg   708w,
+                    ./images/TeamPhoto/OlgaRepinaTablet1062.jpg 1062w
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/TeamPhoto/OlgaRepinaMobile450.jpg   450w,
+                    ./images/TeamPhoto/OlgaRepinaMobile900.jpg   900w,
+                    ./images/TeamPhoto/OlgaRepinaMobile1350.jpg 1350w
+                  "
+                  src="./images/TeamPhoto/OlgaRepinaMobile450.jpg"
+                  sizes="(min-width: 1600px) 15vw, (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt="Ольга Рєпіна"
+                />
+              </picture>
               <div class="team-list__content">
                 <h3 class="team-list__title">Ольга Рєпіна</h3>
                 <p class="team-list__text">Frontend Developer</p>
@@ -285,7 +330,35 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/6.jpg" alt="Микола Тарасов" width="270" class="img" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/TeamPhoto/MykolaTarasovDesktop270.jpg 270w,
+                    ./images/TeamPhoto/MykolaTarasovDesktop540.jpg 540w,
+                    ./images/TeamPhoto/MykolaTarasovDesktop810.jpg 810w
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/TeamPhoto/MykolaTarasovTablet354.jpg   354w,
+                    ./images/TeamPhoto/MykolaTarasovTablet708.jpg   708w,
+                    ./images/TeamPhoto/MykolaTarasovTablet1062.jpg 1062w
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/TeamPhoto/MykolaTarasovMobile450.jpg   450w,
+                    ./images/TeamPhoto/MykolaTarasovMobile900.jpg   900w,
+                    ./images/TeamPhoto/MykolaTarasovMobile1350.jpg 1350w
+                  "
+                  src="./images/TeamPhoto/MykolaTarasovMobile450.jpg"
+                  sizes="(min-width: 1600px) 15vw, (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="team-list__content">
                 <h3 class="team-list__title">Микола Тарасов</h3>
                 <p class="team-list__text">Marketing</p>
@@ -346,7 +419,35 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/7.jpg" alt="Михайло Єрмаков" width="270" class="img" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/TeamPhoto/MykhailoYermakovDesktop270.jpg 270w,
+                    ./images/TeamPhoto/MykhailoYermakovDesktop540.jpg 540w,
+                    ./images/TeamPhoto/MykhailoYermakovDesktop810.jpg 810w
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/TeamPhoto/MykhailoYermakovTablet354.jpg   354w,
+                    ./images/TeamPhoto/MykhailoYermakovTablet708.jpg   708w,
+                    ./images/TeamPhoto/MykhailoYermakovTablet1062.jpg 1062w
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/TeamPhoto/MykhailoYermakovMobile450.jpg   450w,
+                    ./images/TeamPhoto/MykhailoYermakovMobile900.jpg   900w,
+                    ./images/TeamPhoto/MykhailoYermakovMobile1350.jpg 1350w
+                  "
+                  src="./images/TeamPhoto/MykhailoYermakovMobile450.jpg"
+                  sizes="(min-width: 1600px) 15vw, (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="team-list__content">
                 <h3 class="team-list__title">Михайло Єрмаков</h3>
                 <p class="team-list__text">UI Designer</p>
@@ -617,7 +718,7 @@
 
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">
-        <svg class="menu-close-con" width="40" height="40">
+        <svg class="menu-close-icon" width="40" height="40">
           <use href="./images/icons.svg#menu-close-icon"></use>
         </svg>
       </button>

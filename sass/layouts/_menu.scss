@@ -20,9 +20,13 @@
   }
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+.menu-container .menu-toggle:hover,
+.menu-container .menu-toggle:focus {
+  color: $accent-color;
+}
+
+.menu-close-icon {
+  fill: currentColor;
 }
 
 .menu-container {
@@ -33,7 +37,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 48px 0 48px 40px;
   background-color: $white-color;
   z-index: 999;
 
@@ -49,7 +53,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: $title-text-color;
 }
 
 .mobile-nav {
@@ -100,6 +104,8 @@
 
 .networks-list {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .networks-list__link {
